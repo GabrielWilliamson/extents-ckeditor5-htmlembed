@@ -21,6 +21,8 @@
   max-width: 795px;
 }
 
+/* extents */
+
 .align-left {
   text-align: left;
 }
@@ -31,16 +33,22 @@
   text-align: right;
 }
 
+.embed-container-full {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  position: relative;
+  overflow: hidden;
+}
+/* esto funciona bien para youtube pero para facebook aun no funciona bien  */
+.embed-container-full > iframe,
+.embed-container-full > blockquote {
+  width: 100% !important;
+  height: 100% !important;
+  border: 0 !important;
+  display: block !important;
+}
 /* preview */
 
 .preview {
   margin: 4rem 8rem;
-}
-
-.snipets {
-  display: flex;
-  gap: 2px;
-  height: 20px;
-  align-items: center;
-  margin-bottom: 8px;
 }
