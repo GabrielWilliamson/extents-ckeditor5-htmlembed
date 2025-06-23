@@ -1,0 +1,17 @@
+{
+  "name": "iframe-extents",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^6.3.5"
+  },
+  "dependencies": {
+    "ckeditor5": "^45.2.0"
+  }
+}
