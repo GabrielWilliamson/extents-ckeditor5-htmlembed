@@ -106,18 +106,23 @@ export default class IframeAligner extends Plugin {
       innerContent = match[2];
     }
 
-    if (classes.includes(className)) {
-      classes = classes.filter((cls) => cls !== className);
-    } else {
+    const alignmentClasses = [
+      "align-left",
+      "align-center",
+      "align-right",
+      "embed-container-full",
+    ];
+
+    classes = classes.filter((cls) => !alignmentClasses.includes(cls));
+
+    if (!match || !match[1].includes(className)) {
       classes.push(className);
     }
 
-    let newHtml;
-    if (classes.length > 0) {
-      newHtml = `<div class="${classes.join(" ")}">${innerContent}</div>`;
-    } else {
-      newHtml = innerContent;
-    }
+    const newHtml =
+      classes.length > 0
+        ? `<div class="${classes.join(" ")}">${innerContent}</div>`
+        : innerContent;
 
     editor.model.change((writer) => {
       writer.setAttribute("value", newHtml, modelElement);

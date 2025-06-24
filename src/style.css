@@ -1,54 +1,21 @@
-@media print {
-  body {
-    margin: 0 !important;
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .my-iframe {
+    overflow: hidden;
+    padding-bottom: 177.78%;
+    position: relative;
+    height: 0;
   }
-}
 
-.main-container {
-  width: fit-content;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 5rem;
-}
-
-.ck-content {
-  line-height: 1.6;
-  word-break: break-word;
-}
-
-.editor-container_classic-editor .editor-container__editor {
-  min-width: 795px;
-  max-width: 795px;
-}
-
-/* extents */
-
-.align-left {
-  text-align: left;
-}
-.align-center {
-  text-align: center;
-}
-.align-right {
-  text-align: right;
-}
-
-.embed-container-full {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  position: relative;
-  overflow: hidden;
-}
-/* esto funciona bien para youtube pero para facebook aun no funciona bien  */
-.embed-container-full > iframe,
-.embed-container-full > blockquote {
-  width: 100% !important;
-  height: 100% !important;
-  border: 0 !important;
-  display: block !important;
-}
-/* preview */
-
-.preview {
-  margin: 4rem 8rem;
+  .my-iframe iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
 }
