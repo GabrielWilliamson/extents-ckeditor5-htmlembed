@@ -1,21 +1,4 @@
 .container {
   display: flex;
-  justify-content: center;
-}
-
-@media (max-width: 768px) {
-  .my-iframe {
-    overflow: hidden;
-    padding-bottom: 177.78%;
-    position: relative;
-    height: 0;
-  }
-
-  .my-iframe iframe {
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-  }
+  flex-direction: column;
 }
